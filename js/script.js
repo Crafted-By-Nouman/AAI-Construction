@@ -26,6 +26,12 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 const loadingSpinner = document.querySelector(".loading-spinner");
 const counters = document.querySelectorAll(".counter-number");
 
+// Show More buttons
+const showAllServicesBtn = document.getElementById("show-all-services");
+const showAllProjectsBtn = document.getElementById("show-all-projects");
+const showAllEquipmentBtn = document.getElementById("show-all-equipment");
+const showAllTeamBtn = document.getElementById("show-all-team");
+
 // Initialize the website
 document.addEventListener("DOMContentLoaded", function () {
   // Hide loading spinner after page load
@@ -43,13 +49,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize counters
   initCounters();
+
+  // Add event listeners for show more buttons
+  showAllServicesBtn.addEventListener("click", () => showAllItems("services"));
+  showAllProjectsBtn.addEventListener("click", () => showAllItems("projects"));
+  showAllEquipmentBtn.addEventListener("click", () =>
+    showAllItems("equipment")
+  );
+  showAllTeamBtn.addEventListener("click", () => showAllItems("team"));
 });
+
+// Show all items function
+function showAllItems(section) {
+  const grid = document.querySelector(`.${section}-grid`);
+  grid.parentElement.classList.add("show-all");
+}
 
 // Generate Services
 function generateServices() {
-  servicesData.forEach((service) => {
+  servicesData.forEach((service, index) => {
     const serviceCard = document.createElement("div");
-    serviceCard.className = "service-card";
+    serviceCard.className = `service-card ${index >= 3 ? "hidden-item" : ""}`;
     serviceCard.innerHTML = `
                     <div class="service-icon">
                         <i class="${service.icon}"></i>
@@ -65,9 +85,11 @@ function generateServices() {
 
 // Generate Projects
 function generateProjects() {
-  projectsData.forEach((project) => {
+  projectsData.forEach((project, index) => {
     const projectCard = document.createElement("div");
-    projectCard.className = `project-card ${project.category}`;
+    projectCard.className = `project-card ${project.category} ${
+      index >= 3 ? "hidden-item" : ""
+    }`;
     projectCard.setAttribute("data-category", project.category);
     projectCard.setAttribute("data-id", project.id);
     projectCard.innerHTML = `
@@ -84,9 +106,11 @@ function generateProjects() {
 
 // Generate Equipment
 function generateEquipment() {
-  equipmentData.forEach((equipment) => {
+  equipmentData.forEach((equipment, index) => {
     const equipmentCard = document.createElement("div");
-    equipmentCard.className = "equipment-card";
+    equipmentCard.className = `equipment-card ${
+      index >= 3 ? "hidden-item" : ""
+    }`;
     equipmentCard.innerHTML = `
                     <div class="equipment-image">
                         <img src="${equipment.image}" alt="${equipment.name}" loading="lazy">
@@ -102,9 +126,9 @@ function generateEquipment() {
 
 // Generate Team
 function generateTeam() {
-  teamData.forEach((member) => {
+  teamData.forEach((member, index) => {
     const teamMember = document.createElement("div");
-    teamMember.className = "team-member";
+    teamMember.className = `team-member ${index >= 3 ? "hidden-item" : ""}`;
     teamMember.innerHTML = `
                     <div class="member-image">
                         <img src="${member.image}" alt="${member.name}" loading="lazy">

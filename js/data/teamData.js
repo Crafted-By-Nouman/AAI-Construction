@@ -6,15 +6,33 @@ export const teamData = [
     bio: "With over 15 years in the construction industry, Ahmed leads our company with vision and expertise.",
   },
   {
-    name: "Muhammad imtiaz",
-    role: "Civil engineer",
+    name: "Muhammad Imtiaz",
+    role: "Civil Engineer",
     image: "../../uploads/imtiaz-subhni.png",
-    bio: "Sarah ensures all projects are delivered on time and within budget with her exceptional management skills.",
+    bio: "Imtiaz ensures all projects are delivered on time and within budget with his exceptional management skills.",
+  },
+  {
+    name: "Muhammad Shahbaz",
+    role: "Project Director",
+    image: "../../uploads/Shahbaz.jpg",
+    bio: "With a decade of leadership experience, Usman oversees complex construction projects, ensuring excellence from concept to completion.",
   },
   {
     name: "Imran Shah",
     role: "Site Supervisor",
     image: "../../uploads/Site-supervisor.png",
     bio: "Imran brings technical excellence and innovation to every construction project we undertake.",
+  },
+  {
+    name: "Sadia Khan",
+    role: "Architectural Designer",
+    image: "../../uploads/Sadia-Khan.png",
+    bio: "Sadia combines creativity with precision, crafting architectural designs that blend aesthetics and functionality perfectly.",
+  },
+  {
+    name: "Ayesha Malik",
+    role: "Procurement & Planning Manager",
+    image: "../../uploads/Ayesha-Malik.png",
+    bio: "Ayesha manages procurement operations with exceptional attention to detail, ensuring smooth workflow and quality materials for every project.",
   },
 ];
