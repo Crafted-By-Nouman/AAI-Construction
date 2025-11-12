@@ -614,7 +614,7 @@ header.scrolled {
 }
 
 .member-image {
-  height: 250px;
+  /* height: 250px; */
   overflow: hidden;
 }
 
