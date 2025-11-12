@@ -13,9 +13,9 @@ export const teamData = [
   },
   {
     name: "Muhammad Shahbaz",
-    role: "Project Director",
+    role: "Director Marketing",
     image: "../../uploads/Shahbaz.jpg",
-    bio: "With a decade of leadership experience, Usman oversees complex construction projects, ensuring excellence from concept to completion.",
+    bio: "Shahbaz leads the marketing division with strategic insight and creativity, driving the company’s brand growth and client engagement in the construction industry.",
   },
   {
     name: "Imran Shah",
