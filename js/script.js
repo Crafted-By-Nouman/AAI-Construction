@@ -128,7 +128,7 @@ function generateEquipment() {
 function generateTeam() {
   teamData.forEach((member, index) => {
     const teamMember = document.createElement("div");
-    teamMember.className = `team-member ${index >= 3 ? "hidden-item" : ""}`;
+    teamMember.className = `team-member ${index >= 4 ? "hidden-item" : ""}`;
     teamMember.innerHTML = `
                     <div class="member-image">
                         <img src="${member.image}" alt="${member.name}" loading="lazy">
